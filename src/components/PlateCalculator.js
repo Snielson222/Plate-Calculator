@@ -31,7 +31,7 @@ const PlateCalculator = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <label>
-          Total Weight:
+          Total Weight Assuming 45lb Barbell:
           <input
             type="number"
             value={weight}
