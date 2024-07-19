@@ -8,7 +8,7 @@ const PlateDisplay = ({ plates }) => {
 
   return (
     <div>
-      <h2>Required Plates:</h2>
+      <h2>Required Plates Per Side of the Bar:</h2>
       {Object.keys(plateCount).length > 0 ? (
         <ul>
           {Object.entries(plateCount).map(([weight, count]) => (
