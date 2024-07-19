@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PlateDisplay from './PlateDisplay';
 
 const PlateCalculator = () => {
-  const [weight, setWeight] = useState(0);
+  const [weight, setWeight] = useState();
   const [plates, setPlates] = useState([]);
 
   const plateOptions = [45, 35, 25, 10, 5, 2.5]; // Available plates in pounds
