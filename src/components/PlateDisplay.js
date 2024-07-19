@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PlateDisplay = ({ plates }) => {
+const PlateDisplay = ({ plates, unit }) => {
   const plateCount = plates.reduce((acc, plate) => {
     acc[plate] = (acc[plate] || 0) + 1;
     return acc;
@@ -8,12 +8,12 @@ const PlateDisplay = ({ plates }) => {
 
   return (
     <div>
-      <h2>Required Plates Per Side of the Bar:</h2>
+      <h2>Required Plates:</h2>
       {Object.keys(plateCount).length > 0 ? (
         <ul>
           {Object.entries(plateCount).map(([weight, count]) => (
             <li key={weight}>
-              {count} x {weight} lbs
+              {count} x {weight} {unit}
             </li>
           ))}
         </ul>

@@ -2,28 +2,32 @@ import React, { useState } from 'react';
 import PlateDisplay from './PlateDisplay';
 
 const PlateCalculator = () => {
-  const [weight, setWeight] = useState();
+  const [weight, setWeight] = useState(0);
   const [plates, setPlates] = useState([]);
+  const [unit, setUnit] = useState('lbs');
 
-  const plateOptions = [45, 35, 25, 10, 5, 2.5]; // Available plates in pounds
+  const plateOptions = {
+    lbs: [45, 35, 25, 10, 5, 2.5], // Available plates in pounds
+    kg: [20, 15, 10, 5, 2.5, 1.25], // Available plates in kilograms
+  };
 
-  const calculatePlates = (totalWeight) => {
-    let remainingWeight = (totalWeight - 45) / 2; // Assuming a 45 lb barbell
+  const barbellWeight = unit === 'lbs' ? 45 : 20; // Assuming a 45 lb or 20 kg barbell
+
+  const calculatePlates = (totalWeight, unit) => {
+    let remainingWeight = (totalWeight - barbellWeight) / 2;
     const calculatedPlates = [];
-
-    plateOptions.forEach((plate) => {
+    plateOptions[unit].forEach((plate) => {
       while (remainingWeight >= plate) {
         calculatedPlates.push(plate);
         remainingWeight -= plate;
       }
     });
-
     return calculatedPlates;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const calculatedPlates = calculatePlates(weight);
+    const calculatedPlates = calculatePlates(weight, unit);
     setPlates(calculatedPlates);
   };
 
@@ -31,7 +35,7 @@ const PlateCalculator = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <label>
-          Total Weight Assuming 45lb Barbell:
+          Total Weight ({unit}):
           <input
             type="number"
             value={weight}
@@ -40,7 +44,27 @@ const PlateCalculator = () => {
         </label>
         <button type="submit">Calculate</button>
       </form>
-      <PlateDisplay plates={plates} />
+      <div>
+        <label>
+          <input
+            type="radio"
+            value="lbs"
+            checked={unit === 'lbs'}
+            onChange={() => setUnit('lbs')}
+          />
+          Pounds (lbs)
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="kg"
+            checked={unit === 'kg'}
+            onChange={() => setUnit('kg')}
+          />
+          Kilograms (kg)
+        </label>
+      </div>
+      <PlateDisplay plates={plates} unit={unit} />
     </div>
   );
 };
