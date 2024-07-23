@@ -45,18 +45,3 @@ input[type="radio"] {
   margin-left: 10px;
 }
 
-@keyframes around {
-  from {
-      transform:rotate(0deg);
-  }
-  to {
-      transform:rotate(360deg);
-  }
-}
-
-.weightPlate {
-  animation-name: around;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 25000ms;
-}

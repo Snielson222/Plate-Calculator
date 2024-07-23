@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PlateDisplay from './PlateDisplay';
+import "./PlateCalculator.css";
 
 const PlateCalculator = () => {
   const [weight, setWeight] = useState();
@@ -33,7 +34,7 @@ const PlateCalculator = () => {
 
   return (
     <div>
-      <img className="weightPlate" src="https://workout-development-network.s3.us-east-2.amazonaws.com/imageedit_2_6458890741.png" alt="weightPlate" />
+      <img id="weightPlate" src="https://workout-development-network.s3.us-east-2.amazonaws.com/imageedit_2_6458890741.png" alt="weightPlate" />
       <form onSubmit={handleSubmit}>
         <label>
           Total Weight ({unit}):
