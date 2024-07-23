@@ -54,7 +54,7 @@ const PlateCalculator = () => {
             checked={unit === 'lbs'}
             onChange={() => setUnit('lbs')}
           />
-          Pounds (lbs)
+          Pounds with 45 lb barbell (lbs)
         </label>
         <label>
           <input
@@ -63,7 +63,7 @@ const PlateCalculator = () => {
             checked={unit === 'kg'}
             onChange={() => setUnit('kg')}
           />
-          Kilograms (kg)
+          Kilograms with 20 kilo barbell (kg)
         </label>
       </div>
       <PlateDisplay plates={plates} unit={unit} />

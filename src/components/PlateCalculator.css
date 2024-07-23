@@ -3,6 +3,7 @@ img {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 25000ms;
+    padding: 15px;
   }
   
   @keyframes spin {
@@ -20,6 +21,14 @@ img {
   }
 
 .App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+div {
   display: flex;
   justify-content: center;
   flex-direction: column;
