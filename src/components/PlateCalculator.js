@@ -41,6 +41,7 @@ const PlateCalculator = () => {
           <input
             type="number"
             value={weight}
+            placeholder='Enter Desired Weight'
             onChange={(e) => setWeight(Number(e.target.value))}
           />
         </label>
