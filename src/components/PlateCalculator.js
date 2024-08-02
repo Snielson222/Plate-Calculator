@@ -13,7 +13,13 @@ const PlateCalculator = () => {
     kg: [20, 15, 10, 5, 2.5, 1.25], // Available plates in kilograms
   };
 
-  useEffect(() => {}, [lightMode]);
+  useEffect(() => {
+    if (lightMode) {
+      document.body.classList.add('light-mode');
+    } else {
+      document.body.classList.remove('light-mode');
+    }
+  }, [lightMode]);
 
   const barbellWeight = unit === 'lbs' ? 45 : 20; // Assuming a 45 lb or 20 kg barbell
 
