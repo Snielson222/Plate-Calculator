@@ -35,3 +35,9 @@ div {
   align-items: center;
   padding: 10px;
 }
+
+.lightMode {
+  background-color: white;
+  color: black;
+}
+

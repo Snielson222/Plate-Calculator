@@ -6,6 +6,7 @@ const PlateCalculator = () => {
   const [weight, setWeight] = useState();
   const [plates, setPlates] = useState([]);
   const [unit, setUnit] = useState('lbs');
+  const [lightMode, setLightMode] = useState('darkMode');
 
   const plateOptions = {
     lbs: [45, 35, 25, 10, 5, 2.5], // Available plates in pounds
@@ -32,10 +33,9 @@ const PlateCalculator = () => {
     setPlates(calculatedPlates);
   };
 
-  let lightMode
-
   return (
     <div className={lightMode}>
+      <button onClick={() => setLightMode(lightMode === 'darkMode' ? 'lightMode' : 'darkMode')}>Toggle Light Mode</button>
       <img id="weightPlate" src="https://workout-development-network.s3.us-east-2.amazonaws.com/imageedit_2_6458890741.png" alt="weightPlate" />
       <form onSubmit={handleSubmit}>
         <label>
