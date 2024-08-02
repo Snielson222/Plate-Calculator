@@ -32,8 +32,10 @@ const PlateCalculator = () => {
     setPlates(calculatedPlates);
   };
 
+  let lightMode
+
   return (
-    <div>
+    <div className={lightMode}>
       <img id="weightPlate" src="https://workout-development-network.s3.us-east-2.amazonaws.com/imageedit_2_6458890741.png" alt="weightPlate" />
       <form onSubmit={handleSubmit}>
         <label>
