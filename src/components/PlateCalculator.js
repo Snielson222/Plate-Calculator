@@ -42,7 +42,7 @@ const PlateCalculator = () => {
   };
 
   return (
-    <div className={lightMode}>
+    <div>
       <button hidden={lightMode} onClick={() => setLightMode(true)}>Toggle Light Mode</button>
       <button hidden={!lightMode} onClick={() => setLightMode(false)}>Toggle Dark Mode</button>
       <img id="weightPlate" src="https://workout-development-network.s3.us-east-2.amazonaws.com/imageedit_2_6458890741.png" alt="weightPlate" />
