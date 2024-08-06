@@ -52,3 +52,54 @@ button {
     cursor: pointer;
     box-shadow: 2px 2px darkgray;
 }
+
+
+@media (max-width: 600px) {
+  .App {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center;    /* Center form elements */
+    width: 100%;
+  }
+
+  label {
+    font-size: 14px;
+    width: 100%; /* Full width for labels */
+    text-align: center; /* Center text */
+    margin-bottom: 5px; /* Space between label and input */
+  }
+
+  input[type="number"], input[type="radio"], button {
+    font-size: 16px;
+    width: 90%; /* Make inputs and buttons nearly full width */
+    max-width: 300px; /* Limit max width on mobile */
+    margin-bottom: 10px; /* Add space between inputs/buttons */
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+    text-align: center; /* Center button text */
+  }
+
+  h2 {
+    font-size: 20px; /* Slightly smaller heading */
+    text-align: center;
+  }
+
+  ul {
+    padding: 0;
+    width: 100%; /* Full width for list */
+    text-align: center; /* Center list items */
+  }
+
+  li {
+    
+  }
+}
