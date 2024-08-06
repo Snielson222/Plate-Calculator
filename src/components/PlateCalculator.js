@@ -43,8 +43,8 @@ const PlateCalculator = () => {
 
   return (
     <div>
-      <button hidden={lightMode} onClick={() => setLightMode(true)}>Toggle Light Mode</button>
-      <button hidden={!lightMode} onClick={() => setLightMode(false)}>Toggle Dark Mode</button>
+      <button hidden={lightMode} onClick={() => setLightMode(true)}>Light Mode</button>
+      <button hidden={!lightMode} onClick={() => setLightMode(false)}>Dark Mode</button>
       <img id="weightPlate" src="https://workout-development-network.s3.us-east-2.amazonaws.com/imageedit_2_6458890741.png" alt="weightPlate" />
       <form onSubmit={handleSubmit}>
         <label>
@@ -52,7 +52,7 @@ const PlateCalculator = () => {
           <input
             type="number"
             value={weight}
-            placeholder='Enter Desired Weight'
+            placeholder='Enter Weight'
             onChange={(e) => setWeight(Number(e.target.value))}
           />
         </label>
