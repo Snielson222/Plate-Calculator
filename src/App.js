@@ -1,14 +1,14 @@
 import React from 'react';
 import PlateCalculator from './components/PlateCalculator';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <h1>Weightlifting Plate Calculator</h1>
       <PlateCalculator />
+      <Footer />
     </div>
   );
 }
 
 export default App;
-
