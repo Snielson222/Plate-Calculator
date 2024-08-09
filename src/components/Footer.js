@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
     return (
         <footer className="footer">
-            <p>Connect with me:</p>
+            <p>My Links</p>
             <div className="footer-links">
                 <a href="https://snielson222.github.io/" target="_blank" rel="noopener noreferrer">Portfolio</a>
                 <a href="https://github.com/Snielson222" target="_blank" rel="noopener noreferrer">GitHub</a>
